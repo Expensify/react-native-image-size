@@ -15,12 +15,14 @@ import com.facebook.react.bridge.WritableMap;
 import java.io.InputStream;
 import java.net.URL;
 
-public class RNImageSizeModule extends ReactContextBaseJavaModule {
+public class RNImageSizeModule extends NativeImageSizeModuleSpec {
+    public static final String NAME = "RNImageSize";
+
     public RNImageSizeModule(final ReactApplicationContext reactContext) {
         super(reactContext);
     }
 
-    @ReactMethod
+    @Override
     public void getSize(String uri, final Promise promise) {
         new Thread(new Runnable() {
             public void run() {
@@ -68,6 +70,6 @@ public class RNImageSizeModule extends ReactContextBaseJavaModule {
 
     @Override
     public String getName() {
-        return "RNImageSize";
+        return NAME;
     }
 }

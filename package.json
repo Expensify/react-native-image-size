@@ -24,5 +24,13 @@
     "android",
     "ios"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "codegenConfig": {
+    "name": "rnimagesize",
+    "type": "modules",
+    "jsSrcsDir": "./js",
+    "android": {
+      "javaPackageName": "com.existfragger.rnimagesize"
+    }
+  }
 }

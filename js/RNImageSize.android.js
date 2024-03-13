@@ -1,6 +1,3 @@
-import { NativeModules } from 'react-native';
-
-
-const { RNImageSize } = NativeModules;
+import RNImageSize from './NativeImageSizeModule';
 
 export default { getSize: RNImageSize.getSize };
